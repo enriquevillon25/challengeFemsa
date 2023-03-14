@@ -25,7 +25,7 @@ export const HomeScreen = ({navigation}: any) => {
   } = useMovements();
 
   return (
-    <SafeAreaView style={{...styles.container}}>
+    <SafeAreaView style={{...styles.container}} testID="HomeScreen">
       <View>
         <Text style={{...styleGlobal.fontGlobal, ...styles.titleWelcome}}>
           Bienvenido de vuelta!

@@ -6,38 +6,38 @@ import {ProductDetailScreen} from '../screens/ProductDetail/ProductDetailScreen'
 
 const Stack = createStackNavigator();
 
-export const StackNavigation = () => (
-  <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen
-      name="Home"
-      component={HomeScreen}
-      options={{headerShown: false}}
-    />
-    <Stack.Screen
-      name="ProductDetail"
-      component={ProductDetailScreen}
-      options={({route}: any) => ({
-        title: route.params.item.product,
-        headerStyle: {
-          backgroundColor: '#CFD6FF',
-          height: 140,
-        },
-        headerTintColor: '#000000',
-        headerTitleAlign: 'left',
-        headerTitleStyle: {
-          fontWeight: '800',
-          fontSize: 24,
-          fontFamily: 'Avenir',
-          lineHeight: 100,
-          marginTop: 15,
-        },
-        headerLeft: () => null,
-        headerBackTitleVisible: false,
-      })}
-    />
-  </Stack.Navigator>
-);
-
 export default function Navigation() {
-  return <NavigationContainer>{StackNavigation()}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ProductDetail"
+          component={ProductDetailScreen}
+          options={({route}: any) => ({
+            title: route.params.item.product,
+            headerStyle: {
+              backgroundColor: '#CFD6FF',
+              height: 140,
+            },
+            headerTintColor: '#000000',
+            headerTitleAlign: 'left',
+            headerTitleStyle: {
+              fontWeight: '800',
+              fontSize: 24,
+              fontFamily: 'Avenir',
+              lineHeight: 100,
+              marginTop: 15,
+            },
+            headerLeft: () => null,
+            headerBackTitleVisible: false,
+          })}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }

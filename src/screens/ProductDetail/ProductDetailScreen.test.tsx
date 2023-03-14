@@ -1,17 +1,42 @@
 import React from 'react';
-import {
-  fireEvent,
-  render,
-  RenderResult,
-  screen,
-} from '@testing-library/react-native';
+import {render, fireEvent} from '@testing-library/react-native';
 import {ProductDetailScreen} from './ProductDetailScreen';
 
-describe('Test Product Detail Screen', () => {
-  let component: RenderResult;
-  const onEventMock = jest.fn();
-  beforeEach(() => {
-    component = render(<ProductDetailScreen navigation="" route="" />);
+describe('Test in ProductDetailScreen', () => {
+  const mockNavigation = {
+    navigate: jest.fn(),
+  };
+  const mockRoute = {
+    params: {
+      item: {
+        image: 'https://loremflickr.com/640/480/city',
+        createdAt: '2022-01-01T00:00:00.000Z',
+        is_redemption: false,
+        points: 1000,
+      },
+    },
+  };
+  it('Render corrent produ', () => {
+    const {getByTestId} = render(
+      <ProductDetailScreen navigation={mockNavigation} route={mockRoute} />,
+    );
+    expect(getByTestId('ProductDetailScreen')).toBeDefined();
   });
-  it('Render Product Detail', () => {});
+
+  it('Shoul to home screen on button press', () => {
+    const {getByText} = render(
+      <ProductDetailScreen navigation={mockNavigation} route={mockRoute} />,
+    );
+    const button = getByText('Aceptar');
+    fireEvent.press(button);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('Home');
+  });
+
+  it('Should show correct product points information', () => {
+    const {getByText} = render(
+      <ProductDetailScreen navigation={mockNavigation} route={mockRoute} />,
+    );
+    expect(getByText('Detalles del producto')).toBeDefined();
+    expect(getByText('1000 puntos')).toBeDefined();
+  });
 });

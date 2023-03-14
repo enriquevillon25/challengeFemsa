@@ -29,15 +29,22 @@ export const CardProductComponent = ({
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={onPress}
-      accessibilityRole="button">
-      <Image source={{uri: image}} style={styles.image} />
+      onPress={() => typeof onPress === 'function' && onPress()}
+      accessibilityRole="button"
+      testID="product-card">
+      <Image
+        testID="product-image"
+        source={{uri: image}}
+        style={styles.image}
+      />
       <View style={styles.subContainer}>
         <View>
           <Text style={{...styleGlobal.fontGlobal, ...styles.titleName}}>
             {name}
           </Text>
-          <Text style={{...styleGlobal.fontGlobal, ...styles.dateCreated}}>
+          <Text
+            testID="product-created-at"
+            style={{...styleGlobal.fontGlobal, ...styles.dateCreated}}>
             {formatDate(createdAt)}
           </Text>
         </View>

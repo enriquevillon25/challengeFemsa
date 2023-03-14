@@ -7,7 +7,7 @@ import {formatDate} from '../../utils/Formats';
 export const ProductDetailScreen = ({navigation, route}: any) => {
   const {height, width} = useWindowDimensions();
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="ProductDetailScreen">
       <View style={styles.containerImage}>
         <Image
           source={{uri: route.params?.item.image}}
