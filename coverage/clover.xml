@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1678741911158" clover="3.2.0">
+  <project timestamp="1678741911158" name="All files">
+    <metrics statements="58" coveredstatements="41" conditionals="13" coveredconditionals="6" methods="30" coveredmethods="14" elements="101" coveredelements="61" complexity="0" loc="58" ncloc="58" packages="11" files="11" classes="11"/>
+    <package name="challengeFemsa">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/App.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.api">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Api.ts" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/api/Api.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.components.CardProductComponent">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="CardProductComponent.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/components/CardProductComponent/CardProductComponent.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.components.PrimaryButton">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="PrimaryButton.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/components/PrimaryButton/PrimaryButton.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.hooks">
+      <metrics statements="19" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="5"/>
+      <file name="useMovements.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/hooks/useMovements.tsx">
+        <metrics statements="19" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="5"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.navigation">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="Navigation.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/navigation/Navigation.tsx">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.screens.Home">
+      <metrics statements="11" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="1"/>
+      <file name="HomeScreen.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/screens/Home/HomeScreen.tsx">
+        <metrics statements="11" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.screens.ProductDetail">
+      <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="ProductDetailScreen.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/screens/ProductDetail/ProductDetailScreen.tsx">
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.services">
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ProductService.ts" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/services/ProductService.ts">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.theme">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Theme.tsx" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/theme/Theme.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="challengeFemsa.src.utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Formats.ts" path="/Users/enriquevillon/Documents/software-engineer/react-native/challengeFemsa/src/utils/Formats.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
