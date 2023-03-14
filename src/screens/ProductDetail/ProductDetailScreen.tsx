@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, useWindowDimensions} from 'react-native';
-import {PrimaryButton} from '../../components/PrimaryButton/PrimaryButton';
+import {PrimaryButtonComponent} from '../../components/PrimaryButtonComponent/PrimaryButtonComponent';
 import {styleGlobal} from '../../theme/Theme';
 import {formatDate} from '../../utils/Formats';
 
@@ -21,14 +21,14 @@ export const ProductDetailScreen = ({navigation, route}: any) => {
         </Text>
         <Text style={styles.subTitle}>
           Con esta compra
-          {route.params?.item.is_redemption ? 'canjeaste:' : 'acumulaste:'}
+          {route.params?.item.is_redemption ? ' canjeaste:' : ' acumulaste:'}
         </Text>
         <Text style={{...styles.points, ...styleGlobal.fontGlobal}}>
           {route.params?.item.points} puntos
         </Text>
       </View>
       <View style={styles.containerButtons}>
-        <PrimaryButton
+        <PrimaryButtonComponent
           title="Aceptar"
           onPress={() => {
             navigation.navigate('Home');

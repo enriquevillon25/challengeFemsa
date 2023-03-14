@@ -1,9 +1,12 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react-native';
+import {fireEvent, render, screen} from '@testing-library/react-native';
 import {HomeScreen} from './HomeScreen';
+import {expect} from '@jest/globals';
 
 describe('Test Home Screen', () => {
   let component;
+  const onEventMock = jest.fn();
+
   beforeEach(() => {
     component = render(<HomeScreen navigation={''} />);
   });
@@ -17,5 +20,10 @@ describe('Test Home Screen', () => {
     const fullName = 'Ruben Rodriguez';
     const name = component.getByText(fullName);
     expect(name).toBeDefined();
+  });
+  it('Should render text Movements ', () => {
+    const movements = 'TUS MOVIMIENTOS';
+    const title = component.getByText(movements);
+    expect(title).toBeDefined();
   });
 });

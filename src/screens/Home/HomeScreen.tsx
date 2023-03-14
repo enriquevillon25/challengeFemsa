@@ -8,7 +8,7 @@ import {
   RefreshControl,
 } from 'react-native';
 import {CardProductComponent} from '../../components/CardProductComponent/CardProductComponent';
-import {PrimaryButton} from '../../components/PrimaryButton/PrimaryButton';
+import {PrimaryButtonComponent} from '../../components/PrimaryButtonComponent/PrimaryButtonComponent';
 import {useMovements} from '../../hooks/useMovements';
 import {styleGlobal} from '../../theme/Theme';
 
@@ -84,7 +84,7 @@ export const HomeScreen = ({navigation}: any) => {
       </View>
       <View style={styles.containerButtons}>
         {typeProductsView === 'earn' || typeProductsView === 'redeemed' ? (
-          <PrimaryButton
+          <PrimaryButtonComponent
             onPress={() => {
               setTypeProductsView('all');
             }}
@@ -93,14 +93,14 @@ export const HomeScreen = ({navigation}: any) => {
           />
         ) : (
           <>
-            <PrimaryButton
+            <PrimaryButtonComponent
               onPress={() => {
                 setTypeProductsView('earn');
               }}
               title="Ganados"
               width="45%"
             />
-            <PrimaryButton
+            <PrimaryButtonComponent
               onPress={() => {
                 setTypeProductsView('redeemed');
               }}
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     paddingVertical: 21,
     paddingHorizontal: 18,
     marginHorizontal: 30,
-    height: 140,
+    height: 150,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -152,6 +152,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '800',
     lineHeight: 22,
+    marginBottom: 5,
   },
   fontPoints: {
     color: '#FFFFFF',

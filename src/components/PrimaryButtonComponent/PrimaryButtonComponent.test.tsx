@@ -6,18 +6,22 @@ import {
 } from '@testing-library/react-native';
 
 import React from 'react';
-import {PrimaryButton} from './PrimaryButton';
+import {PrimaryButtonComponent} from './PrimaryButtonComponent';
 
 let component: RenderResult;
 const onEventMock = jest.fn();
 
-describe('Test Card Product Component', () => {
+describe('Test rimary button component', () => {
   beforeEach(() => {
     component = render(
-      <PrimaryButton title={'Aceptar'} width={'100%'} onPress={onEventMock} />,
+      <PrimaryButtonComponent
+        title={'Aceptar'}
+        width={'100%'}
+        onPress={onEventMock}
+      />,
     );
   });
-  it('Render Card Product', () => {
+  it('Render primary button', () => {
     expect(component).toBeDefined();
   });
 

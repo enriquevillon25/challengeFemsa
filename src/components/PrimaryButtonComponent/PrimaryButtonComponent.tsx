@@ -7,7 +7,7 @@ interface IPrimaryButton {
   onPress: () => void;
   width?: string;
 }
-export const PrimaryButton = ({
+export const PrimaryButtonComponent = ({
   title,
   onPress,
   width = '100%',

@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 import {styleGlobal} from '../../theme/Theme';
 import {formatDate} from '../../utils/Formats';
-
+// import Svg, {Polygon} from 'react-native-svg';
+import {ArroRightIcon} from '../../../assets/index';
 interface CardProduct {
   image: string;
   name: string;
@@ -48,14 +49,17 @@ export const CardProductComponent = ({
             {formatDate(createdAt)}
           </Text>
         </View>
-        <Text style={{...styleGlobal.fontGlobal, ...styles.points}}>
-          {isRedemption ? (
-            <Text style={{color: '#FF0000'}}>- </Text>
-          ) : (
-            <Text style={{color: '#00B833'}}>+ </Text>
-          )}
-          {points}
-        </Text>
+        <View style={styles.subContainerPoints}>
+          <Text style={{...styleGlobal.fontGlobal, ...styles.points}}>
+            {isRedemption ? (
+              <Text style={{color: '#FF0000'}}>-</Text>
+            ) : (
+              <Text style={{color: '#00B833'}}>+</Text>
+            )}
+            {points}
+          </Text>
+          <ArroRightIcon width={10} height={10} />
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -81,15 +85,23 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     fontSize: 14,
     lineHeight: 19,
+    marginBottom: 2,
   },
   dateCreated: {
     fontWeight: '400',
     fontSize: 12,
     lineHeight: 16,
+    marginTop: 5,
+  },
+  subContainerPoints: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   points: {
     fontWeight: '800',
     fontSize: 16,
     lineHeight: 22,
+    marginRight: 17,
   },
 });
