@@ -2,8 +2,6 @@ Challegue Femsa Mobile App
 
 Aplicación donde puedo ver el total de puntos y mis ultimos movimientos de productos
 
-Plataforma validada en plataformas IOS dispositivos Iphone disculpe tengo inconvenientes con el android studio y mi mac m1 por el procesador
-
 Funcionalidades Implementadas
 
 Listado de productos en home con correcto renderizado
@@ -29,3 +27,5 @@ React Native Svg para importación de svg a RN
 React Native Svg Transformer para transformar el svg
 
 Aplicación con buenas practicas correcta memorización para mekora de perfomance
+
+Plataforma validada en plataformas IOS dispositivos Iphone. Disculpe tuve inconvenientes con el android studio y mi mac m1 por el procesador
