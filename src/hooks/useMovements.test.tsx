@@ -1,21 +1,23 @@
 import {renderHook} from '@testing-library/react-hooks';
+import ProductService from '../services/ProductService';
 import {useMovements} from './useMovements';
-import {getAllProducts} from '../services/ProductService';
 
 jest.mock('../services/ProductService');
 
 describe('useMovements hook', () => {
+  const mockProducts = [
+    {id: 3, name: 'Title 1', points: 2000, is_redemption: false},
+    {id: 4, name: 'Title 2', points: 4300, is_redemption: true},
+    {id: 5, name: 'Title 3', points: 1000, is_redemption: false},
+  ];
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it('Should ', async () => {
-    const mockProducts = [
-      {id: 3, name: 'Title 1', points: 2000, is_redemption: false},
-      {id: 4, name: 'Title 2', points: 4300, is_redemption: true},
-      {id: 5, name: 'Title 3', points: 1000, is_redemption: false},
-    ];
-    (getAllProducts as jest.Mock).mockResolvedValueOnce(mockProducts);
+  it('Should get values consume endpoint', async () => {
+    (ProductService.getAllProducts as jest.Mock).mockResolvedValueOnce(
+      mockProducts,
+    );
 
     const {result, waitForNextUpdate} = renderHook(() => useMovements());
     expect(result.current.loading).toBe(true);
@@ -28,12 +30,9 @@ describe('useMovements hook', () => {
   });
 
   it('Should filter products', async () => {
-    const mockProducts = [
-      {id: 1, name: 'Title 1', points: 10, is_redemption: false},
-      {id: 2, name: 'Title 2', points: 20, is_redemption: true},
-      {id: 3, name: 'Title 3', points: 30, is_redemption: false},
-    ];
-    (getAllProducts as jest.Mock).mockResolvedValueOnce(mockProducts);
+    (ProductService.getAllProducts as jest.Mock).mockResolvedValueOnce(
+      mockProducts,
+    );
 
     const {result, waitForNextUpdate} = renderHook(() => useMovements());
 
